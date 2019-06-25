@@ -11,6 +11,9 @@ def downAudio(self):
 		else:
 			os.system('youtube-dl -i --extract-audio --audio-format mp3 -o "'+ruta+extension+'" --playlist-start '+ini+' --playlist-end '+fin+' "'+url+'"')
 
+
+
+
 def instalar(self):
     	so = sys.platform
         if so == 'linux2':
