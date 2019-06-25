@@ -17,30 +17,14 @@ from utils import downAudio
 class YouTube():
     def __init__(self):
         #Ventana
-        self.raiz = Tk()
-        self.raiz.title("Descargar Youtube")
-        self.menu = Menu(self.raiz)
-        self.raiz.config(menu=self.menu)
-        #Variables
-        self.url = StringVar()
-        self.ini = IntVar(value=1)
-        self.fin = IntVar(value=10)
-        self.ruta = StringVar()
         
+        #Variables
+       
         #Labels
-        self.urlLabel = Label(self.raiz, text="URL Playlist o Video:")
-        self.urlText = Entry(self.raiz, textvariable=self.url, width=10) 
-        self.rutaLabel = Label(self.raiz, text="Directorio:")
-        self.rutaText = Entry(self.raiz, textvariable=self.ruta, width=10) 
-    	self.iniLabel = Label(self.raiz, text="Inicio Playlist:")
-        self.iniText = Entry(self.raiz, textvariable=self.ini, width=10) 
-        self.finLabel = Label(self.raiz, text="Fin Playlist:")
-        self.finText = Entry(self.raiz, textvariable=self.fin, width=10)
+        
 
         #Botones
-        self.donwload = Button(self.raiz, text="Descargar", command=partial(downAudio, self))
-        self.salir = Button(self.raiz, text="Salir", command=sys.exit)
-        self.rutaButton = Button(self.raiz, text=" ", command=self.selector)
+        
         
         #Packs
         self.urlLabel.pack(side=TOP, fill=BOTH, expand=True, padx=10, pady=5)
@@ -56,7 +40,7 @@ class YouTube():
         self.salir.pack(side=RIGHT, fill=BOTH, expand=True, padx=10, pady=10)  
 
         #Inicio Ventana
-        self.raiz.mainloop()
+       
 
     def selector(self):
         ruta = tkFileDialog.askdirectory()
